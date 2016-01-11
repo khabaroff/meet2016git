@@ -1,0 +1,163 @@
+/*      & § ¶ • « » */
+
+html {
+    /*overflow: hidden;*/
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    /*overflow: auto;*/
+    position: relative;
+    background-color: #dceaec; 
+    color: black; 
+    padding-bottom: 100px;
+
+}
+ 
+
+
+.purple {color: #484793;}
+.yellow { color: #feda00;}
+.green {color: #44b74f;}
+
+ 
+
+.fa {font-family: 'GaramondMedCapt';
+
+position: fixed; 
+
+-webkit-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1); /* older webkit */
+-webkit-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+   -moz-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+     -o-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+        transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); /* custom */
+  /*opacity: 0;*/
+}
+
+.fa-one:before {
+    content: "Æ";}
+    
+.fa-two:before {
+    content: "§";}
+    
+.fa-three:before {
+    content: "¶";}
+
+.fa-four:before {
+    content: "&";}
+
+.fa-five:before {
+    content: "•";}
+
+.fa-six:before {
+    content: "«";}
+
+.fa-seven:before {
+    content: "»";}
+ 
+ 
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+ 
+
+
+svg {fill:#000;}
+
+.logo {position: fixed; top: 30px; left: 30px; width:64px; height: 41px;}
+
+h1 {font-family: 'RistrettoProMd'; text-transform: uppercase;
+font-size: 120px; line-height: 125px; letter-spacing: 6px;
+text-align: center; margin-top: 40px;  margin-bottom: -75px; margin-left: 10%; margin-right: 10%;}
+
+.down {margin-bottom: -40px;}
+
+h2 {font-family: 'GaramondMedCapt'; font-size: 25px;
+  text-align: center;  margin-top: 0px; margin-bottom: 0;     }
+
+h3 {font-family: 'GaramondMedItCapt'; font-size: 25px;
+  text-align: center;  margin-top: 142px; margin-bottom: 0;     }
+
+h1::selection {
+  color: #feda00; }
+
+h1::-moz-selection {
+  color: #feda00; }
+
+h2::selection {
+  color: #feda00; }
+
+h2::-moz-selection {
+  color: #feda00; }
+
+h3::selection {
+  color: #feda00; }
+
+h3::-moz-selection {
+  color: #feda00; }
+
+
+.right {text-align: right; font-family: 'GaramondMedCapt'; font-size: 25px; line-height: 44px; margin-top: -3px;}
+
+.right::selection {
+  color: #44b74f;}
+
+.right::-moz-selection {
+  color: #44b74f;}
+ 
+.left {text-align: left; font-family: 'GaramondSmbdCapt'; text-transform: uppercase; font-size: 25px; line-height: 44px; letter-spacing: 1px;}
+
+p::selection {
+  color: #484793;}
+
+p::-moz-selection {
+  color: #484793;}
+
+p {margin-bottom: 0;}
+
+a {color: black;}
+
+a:hover {color: #484793;}
+
+a::selection {
+  color: #484793;}
+
+a::-moz-selection {
+  color: #484793;}
+
+
+.row {margin-bottom: 20px;}
+
+.ui-loader {display: none;}
+
+
+
+@media only screen and (max-width: 40em) {
+.right, .left {text-align: center; float: none; width: 100%;}
+
+ h1 {margin-right: 2%; margin-left: 2%; margin-top: 20px; margin-bottom: -40px; font-size: 60px; line-height: 70px; }
+
+h2 { font-size: 20px; margin-bottom: 0px;     }
+
+h3 {font-family: 'GaramondMedItCapt'; font-size: 20px;
+  text-align: center;  margin-top: 40px; margin-bottom: 0px;     }
+
+ 
+.logo { width:32px; height: 20px; top: 10px; left: 10px;}
+ 
+ .right {  font-size: 20px;  margin-bottom: -10px;}
+ 
+ 
+.left { font-size: 20px;  }
+
+
+
+}
+ 
+

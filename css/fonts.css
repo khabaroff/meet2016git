@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'GaramondMedCapt';
+  src: url('../fonts/GaramondMedCapt.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GaramondMedCapt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GaramondMedCapt.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GaramondMedCapt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GaramondMedCapt.svg#1aab186091644f204b144578c59edb64') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'GaramondMedItCapt';
+  src: url('../fonts/GaramondMedItCapt.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GaramondMedItCapt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GaramondMedItCapt.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GaramondMedItCapt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GaramondMedItCapt.svg#ba4a6a7c38f311ac40bee98bfdac6ff6') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
+@font-face {
+  font-family: 'GaramondSmbdCapt';
+  src: url('../fonts/GaramondSmbdCapt.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GaramondSmbdCapt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GaramondSmbdCapt.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GaramondSmbdCapt.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GaramondSmbdCapt.svg#b88cf393746e77c15b1aa1973adbcbf7') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+
+
+@font-face {
+  font-family: 'RistrettoProMd';
+  src: url('../fonts/RistrettoProMedium.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/RistrettoProMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/RistrettoProMedium.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/RistrettoProMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/RistrettoProMedium.svg#c7bd337a1c9d78ef32b4f8a39048e62a') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
