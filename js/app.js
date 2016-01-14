@@ -8,9 +8,9 @@
 // });
 
 
-var particles = 35; // частицы
+var particles = 30; // частицы
 var steps = 40; // шаги анимации
-var allTime = 4000; // время полета
+var allTime = 2000; // время полета
 
 var w = window.innerWidth;
 var h = window.innerHeight;
@@ -47,7 +47,7 @@ for (var i = 0; i < particles; i++) {
 var box = document.createElement('span'); 	
 box.className = masterShapes[Math.floor(Math.random()*7)];
 box.className = box.className + " " + masterColors[Math.floor(Math.random()*3)];
-box.style.fontSize = Math.floor(Math.random()*100) + 25 + "px";
+box.style.fontSize = Math.floor(Math.random()*100) + 15 + "px";
 box.style.left = Math.floor(Math.random()*w/10 + w/2 - w/20) + "px";
 box.style.top = h + 100 + "px";
 boxNew[i] = box; 
@@ -149,6 +149,8 @@ for (var k = 0; k < particles; k++) // по частицам
 {
  
 boxNew[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
+
+// boxNew[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(.74, 0, .34, 1)";
 boxNew[k].style.webkitTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
 boxNew[k].style.MozTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
 boxNew[k].style.msTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
@@ -162,14 +164,14 @@ lay = lay + 1
 //console.log(lay)
 }
  
-createParticles()
+createParticles();
 fireSpiralPrepare();
   
 
 function partA() {
    
  fireGoToSpace();
-
+fireSpiralPrepare();
   setTimeout(partB,allTime/6);
 
 }

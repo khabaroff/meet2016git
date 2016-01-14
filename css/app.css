@@ -23,26 +23,33 @@ body {
 
  
 
-.fa {font-family: 'GaramondMedCapt';
+.fa {font-family: 'GaramondSmbdCapt';
 
 position: fixed; 
 
--webkit-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1); /* older webkit */
--webkit-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
-   -moz-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
-     -o-transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
-        transition: all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); /* custom */
+-webkit-transition: all 10000ms cubic-bezier(0.175, 0.460, 0.380, 1);  
+-webkit-transition: all 10000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+   -moz-transition: all 10000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+     -o-transition: all 10000ms cubic-bezier(0.175, 0.460, 0.380, 1.010); 
+        transition: all 10000ms cubic-bezier(0.175, 0.460, 0.380, 1.010);  
   /*opacity: 0;*/
 }
 
+/*.fa-one:before {
+    content: "Æ";}*/
+
 .fa-one:before {
-    content: "Æ";}
-    
+    content: "∼";}
+
 .fa-two:before {
     content: "§";}
     
+/*.fa-three:before {
+    content: "¶";}*/
+
 .fa-three:before {
-    content: "¶";}
+    content: "«";}
+
 
 .fa-four:before {
     content: "&";}
@@ -51,10 +58,10 @@ position: fixed;
     content: "•";}
 
 .fa-six:before {
-    content: "«";}
+    content: "}";}
 
 .fa-seven:before {
-    content: "»";}
+    content: "{";}
  
  
 
