@@ -15,7 +15,8 @@ body {
 .purple {color: #484793;}
 .yellow { color: #feda00;}
 .green {color: #44b74f;}
-i {font-style: normal;}
+
+.particle {font-style: normal; width: 100px; height: 100px; position: fixed;}
 
 .fa {font-family: 'GaramondSmbdCapt';
 position: fixed;
