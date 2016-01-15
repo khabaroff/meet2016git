@@ -15,7 +15,7 @@ var coordinatesY = new Array;
 var spin = new Array;
 var skew = new Array;
 
-var boxNew = new Array;
+var boxWithParticle = new Array;
 var allTime = 1000;
 
 var gravity = 20;
@@ -39,7 +39,7 @@ box.style.fontSize = Math.floor(Math.random()*120) + 25 + "px";
 box.style.left = Math.floor(Math.random()*w/2 + w/4) + "px";
 box.style.top = h/2 + "px";
   
-boxNew[i] = box; 
+boxWithParticle[i] = box;
  
 
 
@@ -54,27 +54,27 @@ function firePlain(){
 
 for (var j = 0; j < particles; j++) {
 
-	var boxNew = document.getElementsByClassName("fa")[j];
+	var boxWithParticle = document.getElementsByClassName("fa")[j];
 
 
-	boxNew.style.left = Math.floor(Math.random()*w*3 - w) + "px";
-	boxNew.style.top = Math.floor(Math.random()*h*3 - h) + "px";
+	boxWithParticle.style.left = Math.floor(Math.random()*w*3 - w) + "px";
+	boxWithParticle.style.top = Math.floor(Math.random()*h*3 - h) + "px";
 
 
-	if (boxNew.className.indexOf('visible') < 0) {
+	if (boxWithParticle.className.indexOf('visible') < 0) {
  
-	boxNew.className = boxNew.className + " visible";
+	boxWithParticle.className = boxWithParticle.className + " visible";
 
 		}
 
 	var angle = Math.floor(Math.random()*200-400);
 
 
-boxNew.style.webkitTransform = "rotate("+angle+"deg)";
-boxNew.style.MozTransform = "rotate("+angle+"deg)";
-boxNew.style.msTransform = "rotate("+angle+"deg)";
-boxNew.style.OTransform = "rotate("+angle+"deg)";
-boxNew.style.transform = "rotate("+angle+"deg)";
+boxWithParticle.style.webkitTransform = "rotate("+angle+"deg)";
+boxWithParticle.style.MozTransform = "rotate("+angle+"deg)";
+boxWithParticle.style.msTransform = "rotate("+angle+"deg)";
+boxWithParticle.style.OTransform = "rotate("+angle+"deg)";
+boxWithParticle.style.transform = "rotate("+angle+"deg)";
  
 
 }
@@ -131,16 +131,16 @@ var  rr= coordinatesY[lay+ k * steps]
 console.log(ee +" "+ rr);
 
 
-boxNew[k].style.webkitTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
-boxNew[k].style.MozTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
-boxNew[k].style.msTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
-boxNew[k].style.OTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
-boxNew[k].style.transform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
+boxWithParticle[k].style.webkitTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
+boxWithParticle[k].style.MozTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
+boxWithParticle[k].style.msTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
+boxWithParticle[k].style.OTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
+boxWithParticle[k].style.transform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skew[k]+"deg)";
  
 
- 	if (boxNew[k].className.indexOf('visible') < 0) {
+ 	if (boxWithParticle[k].className.indexOf('visible') < 0) {
  
-	boxNew[k].className = boxNew[k].className + " visible";
+	boxWithParticle[k].className = boxWithParticle[k].className + " visible";
 
 		}
 

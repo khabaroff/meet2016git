@@ -22,7 +22,7 @@ var coordinatesY = new Array;
 var spin = new Array;
 var skewX = new Array;
 var skewY = new Array;
-var boxNew = new Array;
+var boxWithParticle = new Array;
 var again = 1;
 
 $( window ).resize(function() {
@@ -50,7 +50,7 @@ box.className = box.className + " " + masterColors[Math.floor(Math.random()*3)];
 box.style.fontSize = Math.floor(Math.random()*100) + 15 + "px";
 box.style.left = Math.floor(Math.random()*w/10 + w/2 - w/20) + "px";
 box.style.top = h + 100 + "px";
-boxNew[i] = box; 
+boxWithParticle[i] = box;
 document.body.appendChild(box);
 }
 }
@@ -60,18 +60,18 @@ function relocate()  {
 
 for (var r = 0; r < particles; r++) {
 
-boxNew[r].style.webkitTransform =  "none";
-boxNew[r].style.MozTransform =  "none";
-boxNew[r].style.msTransform =  "none";
-boxNew[r].style.OTransform =  "none";
-boxNew[r].style.transform =  "none";
+boxWithParticle[r].style.webkitTransform =  "none";
+boxWithParticle[r].style.MozTransform =  "none";
+boxWithParticle[r].style.msTransform =  "none";
+boxWithParticle[r].style.OTransform =  "none";
+boxWithParticle[r].style.transform =  "none";
 
-boxNew[r].style.left = Math.floor(Math.random()*w/2  + w/4) + "px";
-boxNew[r].style.top = h + 100 + "px"; 
+boxWithParticle[r].style.left = Math.floor(Math.random()*w/2  + w/4) + "px";
+boxWithParticle[r].style.top = h + 100 + "px";
 
-boxNew[r].style.animationDelay = 0.1*allTime + "ms" ;
-boxNew[r].style.transition = "all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
-boxNew[r].style.opacity = 0;
+boxWithParticle[r].style.animationDelay = 0.1*allTime + "ms" ;
+boxWithParticle[r].style.transition = "all 1000ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
+boxWithParticle[r].style.opacity = 0;
 //console.log("relocated" + r)
 }
 
@@ -91,16 +91,16 @@ function fireGoToSpace() {
 st1 = Math.floor(Math.random()*w);
 st2 = Math.floor(Math.random()*h*7/8-100);
 
-boxNew[st].style.transition = "all "+allTime/2.5+"ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
-boxNew[st].style.left = st1 + "px";
-boxNew[st].style.top = st2 + "px";
-boxNew[st].style.opacity = 1;
+boxWithParticle[st].style.transition = "all "+allTime/2.5+"ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
+boxWithParticle[st].style.left = st1 + "px";
+boxWithParticle[st].style.top = st2 + "px";
+boxWithParticle[st].style.opacity = 1;
 
-// boxNew[st].style.webkitTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
-// boxNew[st].style.MozTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
-// boxNew[st].style.msTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
-// boxNew[st].style.OTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
-// boxNew[st].style.transform =  "translate(" + st1 + "px, " - st2 - h + "px)";
+// boxWithParticle[st].style.webkitTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
+// boxWithParticle[st].style.MozTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
+// boxWithParticle[st].style.msTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
+// boxWithParticle[st].style.OTransform =  "translate(" + st1 + "px, " - st2 - h + "px)";
+// boxWithParticle[st].style.transform =  "translate(" + st1 + "px, " - st2 - h + "px)";
 
 
 } 
@@ -148,14 +148,14 @@ function fireSpiral() {
 for (var k = 0; k < particles; k++) // по частицам
 {
  
-boxNew[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
+boxWithParticle[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(0.175, 0.460, 0.380, 1.010)";
 
-// boxNew[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(.74, 0, .34, 1)";
-boxNew[k].style.webkitTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
-boxNew[k].style.MozTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
-boxNew[k].style.msTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
-boxNew[k].style.OTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
-boxNew[k].style.transform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
+// boxWithParticle[k].style.transition = "all " + allTime*1.2 + "ms cubic-bezier(.74, 0, .34, 1)";
+boxWithParticle[k].style.webkitTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
+boxWithParticle[k].style.MozTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
+boxWithParticle[k].style.msTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
+boxWithParticle[k].style.OTransform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
+boxWithParticle[k].style.transform =  "translate(" + coordinatesX[lay+ k * steps] + "px, " + coordinatesY[lay+ k * steps] + "px) rotate("+spin[k]+"deg) rotateX("+skewX[k]+"deg) rotateY("+skewY[k]+"deg)";
 
 } 
 
