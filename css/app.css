@@ -6,8 +6,8 @@ html {
 }
 
 body {
-    height: 100%;
-    /*overflow: auto;*/
+    /*height: 100%;*/
+    overflow: auto;
     position: relative;
     background-color: #dceaec; 
     color: black; 
@@ -35,21 +35,14 @@ position: fixed;
   /*opacity: 0;*/
 }
 
-/*.fa-one:before {
-    content: "Æ";}*/
-
 .fa-one:before {
     content: "∼";}
 
 .fa-two:before {
     content: "§";}
     
-/*.fa-three:before {
-    content: "¶";}*/
-
 .fa-three:before {
     content: "«";}
-
 
 .fa-four:before {
     content: "&";}
