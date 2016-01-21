@@ -1,4 +1,4 @@
-var particles = 10; // частицы
+var particles = 30; // частицы
 var steps = 20; // шаги анимации
 var allTime = 2000; // время полета
 
@@ -230,57 +230,19 @@ function partC() {
 
 //=======================================
 
-$("body").on("tap", function () {
+$("body").on("click", function () {
+
 
     if (again) {
 
         partA();
+
     }
 
 });
 
-
 //
-//var velocity;
-//
-//var checkScrollSpeed = (function(settings){
-//    settings = settings || {};
-//
-//    var lastPos, newPos, timer, delta,
-//        delay = settings.delay || 50; // in "ms" (higher means lower fidelity )
-//
-//    function clear() {
-//      lastPos = null;
-//      delta = 0;
-//    }
-//
-//    clear();
-//
-//    return function(){
-//      newPos = window.scrollY;
-//      if ( lastPos != null ){ // && newPos < maxScroll
-//        delta = newPos -  lastPos;
-//      }
-//      lastPos = newPos;
-//      clearTimeout(timer);
-//      timer = setTimeout(clear, delay);
-//      return delta;
-//    };
-//})();
-//
-//// listen to "scroll" event
-//window.onscroll = function(){
-//   velocity = checkScrollSpeed();
-//};
-//
-//
-//$(window).on("scroll", function() {
-//  var scrollHeight = $(document).height();
-//  var scrollPosition = $(window).height() + $(window).scrollTop();
-//  if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-//     console.log(velocity)
-//  }
-//});
-
-
-
+//var scrollSpeedMonitor = new ScrollSpeedMonitor(function (speedInPxPerMs, timeStamp, newDirection)
+//{
+//    console.log('Scroll speed: ' + speedInPxPerMs);
+//})

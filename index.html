@@ -10,7 +10,10 @@
 
     <link rel="stylesheet" href="css/app.css" />
 
- 
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/scrollspeedmonitor.js"></script>
+
   </head>
   <body>
 
@@ -82,12 +85,18 @@
 <p><a target="_blank" href="https://www.facebook.com/sasha.ponomarev">Alexander Ponomarev</a></p></div>
 </div>
  
-   <div class="row"></div>
-
-<script src="js/jquery.min.js"></script> 
-<script src="js/jquery.mobile.min.js"></script> 
+   <div class="row" id="speed"></div>
 <script src="js/reapp.js"></script>
-<!-- <script src="js/down.js"></script> -->
+
+
+<script>
+    var scrollSpeedMonitor = new ScrollSpeedMonitor(function (speedInPxPerMs, timeStamp, newDirection)
+    {
+        console.log('Scroll speed: ' + speedInPxPerMs);
+    })
+
+    // console.log(scrollSpeedMonitor)
+</script>
 
 
   </body>

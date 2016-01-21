@@ -16,10 +16,10 @@ body {
 .yellow { color: #feda00;}
 .green {color: #44b74f;}
 
-.particle {font-style: normal; width: 100px; height: 100px; position: absolute;}
+.particle {font-style: normal; width: 100px; height: 100px; position: fixed;}
 
 .fa {font-family: 'GaramondSmbdCapt';
-position: absolute;
+/*position: static;*/
 }
 
 .fa-one:before {
@@ -120,8 +120,6 @@ a::-moz-selection {
 
 
 .row {margin-bottom: 20px;}
-
-.ui-loader {display: none;}
 
 
 
