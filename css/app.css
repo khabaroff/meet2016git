@@ -16,10 +16,10 @@ body {
 .yellow { color: #feda00;}
 .green {color: #44b74f;}
 
-.particle {font-style: normal; width: 100px; height: 100px; position: fixed;}
+.particle {font-style: normal; width: 100px; height: 100px; position: absolute;}
 
 .fa {font-family: 'GaramondSmbdCapt';
-position: fixed;
+position: absolute;
 }
 
 .fa-one:before {
