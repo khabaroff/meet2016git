@@ -65,7 +65,7 @@ function fadeAndRelocate(timeToDie) { // фейд на последней 1/8 п
     for (var r = 0; r < particles; r++) {
 
         parentBoxWithParticle[r].style.transition = "all " + timeToDie + "ms linear";
-        parentBoxWithParticle[r].style.opacity = 1; /// родитель затухает TODO
+        parentBoxWithParticle[r].style.opacity = 0; /// родитель затухает TODO
 
         parentBoxWithParticle[r].style.webkitTransform = "none";
         parentBoxWithParticle[r].style.MozTransform = "none";
@@ -75,8 +75,8 @@ function fadeAndRelocate(timeToDie) { // фейд на последней 1/8 п
 
         ////// родитель перемещается в подвал - по ширине живет в середине в полосе ширина / 10
         //  координаты родителя задаются left и top
-        parentBoxWithParticle[r].style.left = Math.floor(Math.random() * w / 10 + w / 2 - w / 20) + "px";
-        parentBoxWithParticle[r].style.top = h + 200 + "px";
+        //parentBoxWithParticle[r].style.left = Math.floor(Math.random() * w / 10 + w / 2 - w / 20) + "px";
+        //parentBoxWithParticle[r].style.top = h + 200 + "px";
     }
 
 }
@@ -196,7 +196,7 @@ function partA() {
     fireGoToSpace(allTime / 3);
     console.log("went to space")
 
-    setTimeout(partB, allTime / 3);
+    setTimeout(partB, allTime / 4);
 }
 
 function partB() {
@@ -221,7 +221,7 @@ function partB() {
 
 function partC() {
 
-    fadeAndRelocate(10);
+    fadeAndRelocate(100);
 
     console.log("Again?");
     again = 1;
@@ -241,8 +241,8 @@ $("body").on("click", function () {
 
 });
 
-//
-//var scrollSpeedMonitor = new ScrollSpeedMonitor(function (speedInPxPerMs, timeStamp, newDirection)
-//{
-//    console.log('Scroll speed: ' + speedInPxPerMs);
-//})
+
+var scrollSpeedMonitor = new ScrollSpeedMonitor(function (speedInPxPerMs, timeStamp, newDirection)
+{
+    console.log('Scroll speed: ' + speedInPxPerMs);
+})
